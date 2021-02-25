@@ -8,7 +8,7 @@
         :style="`
           height: ${mergedConfig.headerHeight}px;
           line-height: ${mergedConfig.headerHeight}px;
-          width: ${widths[i]}px;
+          width: ${widths[i]};
         `"
         :align="aligns[i]"
         v-html="headerItem"
@@ -34,7 +34,7 @@
           class="ceil"
           v-for="(ceil, ci) in row.ceils"
           :key="`${ceil}${ri}${ci}`"
-          :style="`width: ${widths[ci]}px;`"
+          :style="`width: ${widths[ci]};`"
           :align="aligns[ci]"
           v-html="ceil"
           @click="emitEvent('click', ri, ci, row, ceil)"
